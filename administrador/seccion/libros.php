@@ -162,7 +162,7 @@ switch ($accion) {
 </div>
 
 <div class="col-md-7">
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="tabla" >
         <thead>
             <tr>
                 <th>ID</th>
@@ -200,5 +200,14 @@ switch ($accion) {
     </table>
 </div>
 
+<script> 
+    var tabla= document.querySelector("#tabla");
+
+    var dataTable = new DataTable(tabla,{
+            perPage:3,
+            perPageSelect:[3,6,9,12,15]
+
+    });
+</script>
 
 <?php include("../template/footer.php"); ?>
